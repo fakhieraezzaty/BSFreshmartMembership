@@ -2733,3 +2733,411 @@ main > section > * {
 .outlets::after {
     display: none !important;
 }
+
+/* ===================================
+   MOBILE FIX - LETAK PALING BAWAH
+=================================== */
+
+@media (max-width: 650px) {
+
+    /* Elak website melebar ke tepi */
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: calc(100% - 32px);
+        max-width: 100%;
+    }
+
+    .section {
+        padding: 55px 0;
+    }
+
+
+    /* ===============================
+       HEADER MOBILE
+    =============================== */
+
+    .header {
+        position: relative;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        min-height: auto;
+        padding: 16px 0 14px;
+        gap: 14px;
+    }
+
+    .logo {
+        width: 145px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .logo img {
+        width: 100%;
+        height: auto;
+    }
+
+    .navigation {
+        order: initial;
+
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        width: 100%;
+        margin: 0;
+        gap: 5px 14px;
+    }
+
+    .navigation a {
+        padding: 4px 0;
+
+        border-bottom: 2px solid transparent;
+
+        font-size: 9px;
+        line-height: 1.3;
+        white-space: nowrap;
+    }
+
+    .navbar > .button {
+        display: none;
+    }
+
+
+    /* ===============================
+       HOME MOBILE
+    =============================== */
+
+    .home {
+        padding-top: 42px;
+    }
+
+    .home-content {
+        display: flex;
+        flex-direction: column;
+
+        min-height: auto;
+    }
+
+    .home-text {
+        width: 100%;
+        padding-bottom: 10px;
+        text-align: left;
+    }
+
+    .home-text h1 {
+        margin-bottom: 18px;
+
+        font-size: 42px;
+        line-height: 1.05;
+        letter-spacing: -1px;
+    }
+
+    .home-text > p {
+        font-size: 17px;
+        line-height: 1.55;
+    }
+
+    .home-text .button {
+        padding: 13px 22px;
+        font-size: 12px;
+    }
+
+    .home-information {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        width: 100%;
+        gap: 8px;
+        margin-top: 25px;
+    }
+
+    .information-box {
+        min-width: 0;
+        padding: 11px 7px;
+        text-align: center;
+    }
+
+    .information-box strong {
+        font-size: 16px;
+    }
+
+    .information-box span {
+        font-size: 9px;
+        line-height: 1.3;
+    }
+
+    .home-image {
+        position: relative;
+
+        width: 100%;
+        height: 370px;
+        margin-top: 10px;
+    }
+
+    .member-card {
+        top: 10px;
+        left: -30px;
+
+        width: 290px;
+        max-width: none;
+
+        transform: rotate(-3deg);
+    }
+
+    .whale-basket {
+        right: -65px;
+        bottom: -15px;
+
+        width: 300px;
+        max-width: none;
+    }
+
+
+    /* ===============================
+       QUICK BENEFITS
+    =============================== */
+
+    .quick-benefits {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 12px;
+        padding: 18px;
+        border-radius: 16px;
+    }
+
+    .quick-benefit-item {
+        align-items: flex-start;
+    }
+
+    .quick-icon {
+        width: 42px;
+        height: 42px;
+        min-width: 42px;
+
+        font-size: 17px;
+    }
+
+
+    /* ===============================
+       SECTION HEADING
+    =============================== */
+
+    .section-heading {
+        margin-bottom: 38px;
+    }
+
+    .section-heading::before {
+        width: 72px;
+        height: 5px;
+        margin-bottom: 15px;
+    }
+
+    .section-heading h2 {
+        font-size: 33px;
+        line-height: 1.15;
+        letter-spacing: 0;
+    }
+
+    .section-heading p {
+        padding: 0 8px;
+
+        font-size: 15px;
+        line-height: 1.55;
+    }
+
+
+    /* ===============================
+       HOW TO JOIN MOBILE
+    =============================== */
+
+    .how-to-join .steps-grid {
+        display: flex !important;
+        flex-direction: column !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        gap: 14px !important;
+        margin: 0 auto !important;
+    }
+
+    .how-to-join .step-card {
+        display: block;
+
+        width: 100% !important;
+        min-width: 0 !important;
+        min-height: auto;
+
+        padding: 55px 22px 25px;
+        margin: 0 !important;
+    }
+
+    .how-to-join .step-card h3 {
+        margin-bottom: 8px;
+
+        font-size: 18px;
+        line-height: 1.35;
+    }
+
+    .how-to-join .step-card p {
+        max-width: 100%;
+
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .how-to-join .step-image {
+        width: 68px;
+        height: 68px;
+
+        margin: 0 auto 15px;
+
+        font-size: 29px;
+    }
+
+    .how-to-join .step-number {
+        top: 15px;
+        left: 15px;
+
+        width: 35px;
+        height: 35px;
+
+        font-size: 17px;
+    }
+
+    .how-to-join .step-arrow {
+        display: block;
+
+        height: 34px;
+
+        text-align: center;
+        font-size: 28px;
+
+        transform: rotate(90deg);
+    }
+
+    .how-to-join .steps-down-arrow {
+        height: 45px;
+        font-size: 28px;
+    }
+
+    .join-banner {
+        width: 100%;
+        padding: 22px 18px;
+    }
+
+    .join-banner-left {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .join-banner-text {
+        text-align: center;
+    }
+
+
+    /* ===============================
+       OUTLETS MOBILE
+    =============================== */
+
+    .outlet-layout {
+        display: block;
+    }
+
+    .outlet-sidebar {
+        position: static;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        margin-bottom: 25px;
+        gap: 7px;
+    }
+
+    .outlet-sidebar h3 {
+        width: 100%;
+    }
+
+    .outlet-sidebar a {
+        margin: 0;
+        padding: 8px 10px;
+
+        background: var(--light-blue);
+
+        font-size: 12px;
+    }
+
+    .map-container {
+        height: 300px;
+        border-radius: 15px;
+    }
+
+    .outlet-card-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* ===============================
+       FOOTER MOBILE
+    =============================== */
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        gap: 28px 18px;
+        padding: 35px 0;
+    }
+
+    .footer-logo {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+
+    .footer-logo img {
+        width: 230px;
+        margin: 0 auto;
+    }
+
+    .footer-logo p {
+        text-align: center;
+    }
+
+    .footer-column {
+        min-width: 0;
+    }
+
+    .footer-column h3 {
+        font-size: 12px;
+    }
+
+    .footer-column > a {
+        font-size: 12px;
+    }
+
+    .footer-column:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .footer-store {
+        display: inline-block;
+        margin-right: 7px;
+        margin-bottom: 7px;
+    }
+
+    .copyright {
+        padding: 15px 12px;
+        font-size: 10px;
+    }
+}
